@@ -24,4 +24,8 @@
     -   Cuando decida hacer una compra, la base de datos web recibirá una orden de actualizar el stock y generará una nueva entrada en la tabla de pedidos.
     -   Esto incluye el precio, stock, imagen y nombre. Además de eso tendrá acceso a un apartado restringido donde podrá ver todos los pedidos realizados. 
 # Base de Datos Relacional
-(wip)
+-   La base de datos se compone de 4 tablas
+    -   Usuarios
+    -   Productos
+    -   Proveedores
+    -   Pedidos
