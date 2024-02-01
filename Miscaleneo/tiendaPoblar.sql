@@ -32,17 +32,17 @@ DEFAULT CHARSET=utf8mb4;
 -- Poblar la tabla productos con datos ficticios
 INSERT INTO productos (idProducto, nombre, precio, categoria, stock, idProveedor, imagenURL)
 VALUES
-(11, 'Jordan 4 UNC', 389.99, 'Deportivas', 50, 1111, '/vista/img/jordan4unc.jpg'),
-(22, 'Jordan 4 Black Cat', 899.99, 'Deportivas', 30, 2222, '/vista/img/jordan4blackcat.jpg'),
-(33, 'Jordan 4 SB', 399.99, 'Deportivas', 20, 3333, '/vista/img/jordan4sb.jpg'),
-(44, 'Jordan 1 Lost N Found', 339.99, 'Deportivas', 40, 1111, '/vista/img/jordan1lost.jpg')
-(55, 'Jordan 1 UNC', 449.99, 'Deportivas', 25, 2222, '/vista/img/jordan1unc.jpg'),
-(66, 'Jordan 1 Shadow', 339.99, 'Deportivas', 15, 3333, '/vista/img/jordan1shadow.jpg'),
-(77, 'Airmax 95 OG Crystal Blue', 799.99, 'Casuales', 35, 1111, '/vista/img/airmax95.jpg'),
-(88, 'Airmax Tailwind Skepta', 399.99, 'Skate', 28, 2, '/vista/img/airmaxtailwind.jpg'),
-(99, 'Nike Dunk Court Purple', 199.99, 'Skate', 22, 3333, '/vista/img/nikedunkpurple.jpeg'),
-(111, 'Nike Dunk Blue Lobster', 1999.99, 'Skate', 1, 1111, '/vista/img/nikedunklobster.jpg'),
-(122, 'Nike Air Force 1 Nocta', 249.99, 'Casuales', 33, 2222, '/vista/img/airforce1nocta.jpg'),
-(133, 'Nike Dunk Powepuff Girls Blue', 349.99, 'Skate', 12, 3333, '/vista/img/nikedunkpowerpuff.jpg')
+(11, 'Jordan 4 UNC', 389.99, 'Deportivas', 50, 1111, 'vista/img/jordan4unc.jpg'),
+(22, 'Jordan 4 Black Cat', 899.99, 'Deportivas', 30, 2222, 'vista/img/jordan4blackcat.jpg'),
+(33, 'Jordan 4 SB', 399.99, 'Deportivas', 20, 3333, 'vista/img/jordan4sb.jpg'),
+(44, 'Jordan 1 Lost N Found', 339.99, 'Deportivas', 40, 1111, 'vista/img/jordan1lost.jpg')
+(55, 'Jordan 1 UNC', 449.99, 'Deportivas', 25, 2222, 'vista/img/jordan1unc.jpg'),
+(66, 'Jordan 1 Shadow', 339.99, 'Deportivas', 15, 3333, 'vista/img/jordan1shadow.jpg'),
+(77, 'Airmax 95 OG Crystal Blue', 799.99, 'Casuales', 35, 1111, 'vista/img/airmax95.jpg'),
+(88, 'Airmax Tailwind Skepta', 399.99, 'Skate', 28, 2, 'vista/img/airmaxtailwind.jpg'),
+(99, 'Nike Dunk Court Purple', 199.99, 'Skate', 22, 3333, 'vista/img/nikedunkpurple.jpeg'),
+(111, 'Nike Dunk Blue Lobster', 1999.99, 'Skate', 1, 1111, 'vista/img/nikedunklobster.jpg'),
+(122, 'Nike Air Force 1 Nocta', 249.99, 'Casuales', 33, 2222, 'vista/img/airforce1nocta.jpg'),
+(133, 'Nike Dunk Powepuff Girls Blue', 349.99, 'Skate', 12, 3333, 'vista/img/nikedunkpowerpuff.jpg')
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4;
