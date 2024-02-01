@@ -10,6 +10,7 @@ CREATE TABLE usuarios (
     nombreLogin VARCHAR(18) NOT NULL,
     passLogin VARCHAR(18) NOT NULL,
     userName VARCHAR(25) NOT NULL,
+    userApe VARCHAR(25) NOT NULL,
     mail VARCHAR(50) NOT NULL,
     dir VARCHAR(50) )
 ENGINE=INNODB
@@ -30,6 +31,7 @@ CREATE TABLE productos (
     categoria VARCHAR(18) DEFAULT 'Sneaker',
     stock INT NOT NULL,
     idProveedor INT,
+    imagenURL VARCHAR(255),
     FOREIGN KEY (idProveedor) REFERENCES proveedores(idProveedor)
     ON DELETE CASCADE 
     ON UPDATE CASCADE )
@@ -41,6 +43,7 @@ CREATE TABLE pedidos (
     fechaEntrega DATE NOT NULL,
     idProducto INT,
     idUser INT,
+    precioUnitario DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (idProducto) REFERENCES productos(idProducto)
     ON DELETE CASCADE 
     ON UPDATE CASCADE ,
