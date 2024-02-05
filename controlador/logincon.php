@@ -9,10 +9,10 @@ class LoginController {
     public function processLogin($conn) {
         session_start();
 
-        $username = trim($_POST['username']);
-        $password = trim($_POST['password']);
+        $username = $_POST['username'];
+        $password = $_POST['password'];
 
-        if (usuario::authenticate($conn, $username, $password)) {
+        if (usuario::autenticar($conn, $username, $password)) {
             $_SESSION['username'] = $username;
             $_SESSION['authenticated'] = true;
             header("Location: siguiente_pagina.php"); //aqui ponemos la siguiente pagina
