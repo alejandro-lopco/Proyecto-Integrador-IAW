@@ -12,7 +12,7 @@ class LoginController {
         $username = trim($_POST['username']);
         $password = trim($_POST['password']);
 
-        if (User::authenticate($conn, $username, $password)) {
+        if (usuario::authenticate($conn, $username, $password)) {
             $_SESSION['username'] = $username;
             $_SESSION['authenticated'] = true;
             header("Location: siguiente_pagina.php"); //aqui ponemos la siguiente pagina

@@ -1,5 +1,4 @@
 <?php
-// index.php
 $action = isset($_GET['action']) ? $_GET['action'] : 'showLoginForm';
 
 require 'controlador/logincon.php';
