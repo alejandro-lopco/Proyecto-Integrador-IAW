@@ -35,7 +35,7 @@ VALUES
 ('Jordan 4 UNC', 389.99, 'Deportivas', 50, 1111, 'jordan4unc.jpg'),
 ('Jordan 4 Black Cat', 899.99, 'Deportivas', 30, 2222, 'jordan4blackcat.jpg'),
 ('Jordan 4 SB', 399.99, 'Deportivas', 20, 3333, 'jordan4sb.jpg'),
-('Jordan 1 Lost N Found', 339.99, 'Deportivas', 40, 1111, 'jordan1lost.jpg')
+('Jordan 1 Lost N Found', 339.99, 'Deportivas', 40, 1111, 'jordan1lost.jpg'),
 ('Jordan 1 UNC', 449.99, 'Deportivas', 25, 2222, 'jordan1unc.jpg'),
 ('Jordan 1 Shadow', 339.99, 'Deportivas', 15, 3333, 'jordan1shadow.jpg'),
 ('Airmax 95 OG Crystal Blue', 799.99, 'Casuales', 35, 1111, 'airmax95.jpg'),
