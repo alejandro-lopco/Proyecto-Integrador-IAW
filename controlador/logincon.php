@@ -1,7 +1,7 @@
 <?php
 require_once 'modelo/usuario.php';
 
-class LoginController {
+class logincon {
     public function showLoginForm() {
         require 'vista/login.php';
     }
