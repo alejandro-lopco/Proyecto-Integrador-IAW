@@ -2,9 +2,10 @@
     Script para la creaciónd de la base de datos de la tienda
     El diagrama ER se puede encontrar en el archivo "ER.png"
 */
+DROP DATABASE IF EXISTS tienda;
 CREATE DATABASE tienda;
-USE tienda;
 -- Creación de tablas
+USE tienda;
 CREATE TABLE usuarios (
     idUser INT AUTO_INCREMENT PRIMARY KEY,
     nombreLogin VARCHAR(18) NOT NULL,
@@ -12,7 +13,7 @@ CREATE TABLE usuarios (
     userName VARCHAR(25) NOT NULL,
     userApe VARCHAR(25) NOT NULL,
     mail VARCHAR(50) NOT NULL,
-    dir VARCHAR(50) )
+    dir VARCHAR(200) )
 ENGINE=INNODB
 DEFAULT CHARSET=utf8mb4;
 CREATE TABLE proveedores (
@@ -26,9 +27,9 @@ ENGINE=INNODB
 DEFAULT CHARSET=utf8mb4;
 CREATE TABLE productos (
     idProducto INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(18) NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
     precio DECIMAL(10, 2) NOT NULL,
-    categoria VARCHAR(18) DEFAULT 'Sneaker',
+    categoria VARCHAR(25) DEFAULT 'Sneaker',
     stock INT NOT NULL,
     idProveedor INT,
     imagenURL VARCHAR(255),
@@ -41,8 +42,8 @@ CREATE TABLE pedidos (
     idPedido INT AUTO_INCREMENT PRIMARY KEY,
     cantidad INT NOT NULL,
     fechaEntrega DATE NOT NULL,
-    idProducto INT,
-    idUser INT,
+    idProducto INT NOT NULL,
+    idUser INT NOT NULL,
     precioUnitario DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (idProducto) REFERENCES productos(idProducto)
     ON DELETE CASCADE 
