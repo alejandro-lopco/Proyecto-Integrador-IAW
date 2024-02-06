@@ -8,7 +8,7 @@ CREATE DATABASE tienda;
 USE tienda;
 CREATE TABLE usuarios (
     idUser INT AUTO_INCREMENT PRIMARY KEY,
-    nombreLogin VARCHAR(18) NOT NULL,
+    nombreLogin VARCHAR(18) UNIQUE NOT NULL,
     passLogin VARCHAR(18) NOT NULL,
     userName VARCHAR(25) NOT NULL,
     userApe VARCHAR(25) NOT NULL,
@@ -18,7 +18,7 @@ ENGINE=INNODB
 DEFAULT CHARSET=utf8mb4;
 CREATE TABLE proveedores (
     idProveedor INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
+    nombre VARCHAR(100) UNIQUE NOT NULL,
     tlf VARCHAR(20) NOT NULL,
     pais VARCHAR(50) NOT NULL,
     dir VARCHAR(200) NOT NULL,
