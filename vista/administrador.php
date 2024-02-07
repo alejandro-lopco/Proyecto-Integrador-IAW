@@ -14,7 +14,11 @@
   <script src="../index.js"></script>
   <?php 
   require_once '../controlador/back.php';
-  if (!$_SESSION['autentificado'] and $_SESSION['rol'] = 'administrador') { # Comprobación de que se ha pasado por el proceso de Login
+  if (!$_SESSION['autentificado']) { # Comprobación de que se ha pasado por el proceso de Login
+    header("Location: falloLogin.html");
+    die();
+  }
+  if ($_SESSION['rol'] != 'administrador') {
     header("Location: falloLogin.html");
     die();
   }
