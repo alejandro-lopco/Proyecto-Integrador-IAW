@@ -10,11 +10,11 @@
   <meta name="Instituto" content="Ies Villabla" />
   <meta name="Modulo" content="Implantación de Aplicaciones Web" />
   <title>Tienda Sneaker</title>
-  <link rel="stylesheet" href="../CSS/plantilla.css" />
-  <script src="../plantilla.js"></script>
+  <link rel="stylesheet" href="../index.css" />
+  <script src="../index.js"></script>
   <?php 
   require_once '../controlador/back.php';
-  if (!$_SESSION['autentificado']) { # Comprobación de que se ha pasado por el proceso de Login
+  if (!$_SESSION['autentificado'] and $_SESSION['rol'] = 'administrador') { # Comprobación de que se ha pasado por el proceso de Login
     header("Location: falloLogin.html");
     die();
   }
@@ -55,7 +55,7 @@
         <!--Inicio Contenedores Opciones-->
         </div>
         <div class="opcionesBody">
-          <p class="tituloOpciones">Opciones</p>
+          <p class="tituloOpciones">Bienvenido <?= $_SESSION['nombre']?></p>
           <hr />
           <!--Inicio contenedor Opción Específica-->
           <div class="opcion" onmouseover="abrirDeslizable1()" onmouseout="cerrarDeslizable1()">

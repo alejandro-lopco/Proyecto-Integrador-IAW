@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear usuario</title>
+</head>
+<body>
+    <table>
+        <form action="../controlador/crearUsuario.php" method="post">
+            <thead>
+                <th>
+                    <h2>Crear Cuenta</h2>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="loginName">Nombre de Inicio de sesión:</label></td>
+                    <td><input type="text" name="loginName" id="loginName"></td>
+                </tr>
+                <tr>
+                    <td><label for="passwd">Contraseña</label></td>
+                    <td><input type="password" name="passwd" id="passwd"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>Datos Personales</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="userName">Nombre:</label></td>
+                    <td><input type="text" name="userName" id="userName"></td>
+                </tr>
+                <tr>
+                    <td><label for="userApe">Apellidos:</label></td>
+                    <td><input type="text" name="userApe" id="userApe"></td>
+                </tr>
+                <tr>
+                    <td><label for="userMail">Correo Electrónico:</label></td>
+                    <td><input type="email" name="userMail" id="userMail"></td>
+                </tr>
+                <tr>
+                    <td><label for="userDir">Dirección:</label></td>
+                    <td><input type="text" name="userDir" id="userDir"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><input type="reset" name="reset" value="Reiniciar"></td>
+                    <td><input type="submit" name="creacion" value="Crear Cuenta"></td>
+                </tr>
+            </tfoot>
+        </form>
+    </table>
+</body>
+</html>

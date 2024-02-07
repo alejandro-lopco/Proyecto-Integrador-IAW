@@ -23,16 +23,18 @@ if ($check) { # Si la variable devuelve true el login será correcto
 
     switch ($formNombre) { # Acesso a página correspondiente por tipo de usuario
         case 'administrador':
+            $_SESSION['rol'] = 'administrador';
             header("Location: ../vista/administrador.php");
             die();
             break;
         
         case 'empleado':
+            $_SESSION['rol'] = 'empleado';
             header("Location: ../vista/empleado.php");
             die();            
             break;
-
         default:
+            $_SESSION['rol'] = 'cliente';
             header("Location: ../vista/cliente.php");
             die();
             break;
