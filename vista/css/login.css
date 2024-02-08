@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px; /* Añade margen superior */
+    margin-bottom: 30px; /* Añade margen inferior */
+    color: darkred; /* Color rojo */
+    font-size: 28px; /* Tamaño de fuente */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: darkred; /* rojo */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: darkred; /* rojo oscuro al pasar el mouse */
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: darkred; /* rojo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: darkred; /* rojo oscuro al pasar el mouse */
+}
