@@ -66,42 +66,17 @@
             <!--Incio Contenedor Opción Toggle-->
             <div class="toggleDeslizable">
               <a href="#" id="tituloOpcion1">
-                <b>Opcion</b>
+              <b>CARRITO DE <?= $_SESSION['nombre']?></b>
               </a>
             </div>
             <!--Incio Contenedor Opción Contenido-->
             <div class="deslizableOpcion" id="deslizableOpcion1">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-                quia mollitia. Tenetur tempore itaque, architecto perspiciatis
-                consequuntur explicabo natus quas nobis minima totam ullam
-                sint mollitia libero quia qui? Iste!
-              </p>
+            <?php echo mostrarContenidoCarrito(); ?>
               <!--Incio Contenedor Opción Contenido-->
             </div>
             <!--Fin contenedor Opción Específica-->
           </div>
-          <!--Inicio contenedor Opción Específica-->
-          <div class="opcion" onmouseover="abrirDeslizable2()" onmouseout="cerrarDeslizable2()">
-            <!--Incio Contenedor Opción Toggle-->
-            <div class="toggleDeslizable">
-              <a href="#" id="tituloOpcion2">
-                <b>Opcion</b>
-              </a>
-            </div>
             <!--Fin Contenedor Opción Toggle-->
-            <!--Incio Contenedor Opción Contenido-->
-            <div class="deslizableOpcion" id="deslizableOpcion2">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-                quia mollitia. Tenetur tempore itaque, architecto perspiciatis
-                consequuntur explicabo natus quas nobis minima totam ullam
-                sint mollitia libero quia qui? Iste!
-              </p>
-              <!--Fin Contenedor Opción Contenido-->
-            </div>
-            <!--Fin contenedor Opción Específica-->
-          </div>
           <!--Fin Contenedores Opciones-->
         </div>
         <!--Fin Contenedores Body-->

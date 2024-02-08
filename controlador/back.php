@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../vista/back.css" />
+</head>
+<body>
+
 <?php
 # Fichero general para la creación de objetos y funciones
 abstract class db { # Objeto para conexiones rápidas a base de datos con PSO o MYSQLI
@@ -110,3 +120,86 @@ function comprar($user,$prod,$cant) {
         $conex->execute_query($stmt,[$user,$prod,$cant]);    
     }
 }
+function mostrarContenidoCarrito() {
+    $contenidoCarrito = ''; // Aquí vamos a guardar las cosas del carro para mostrarlas después
+    $conex = db::bdMYSQLI(); // Conectamos para sacar los datos de la base
+    $stmt = "SELECT productos.nombre, productos.imagenURL, carrito.cantidad, productos.precio AS preciouna, carrito.cantidad * productos.precio AS total FROM carrito INNER JOIN productos ON carrito.idProducto = productos.idProducto";
+    $meter = $conex->query($stmt);
+
+    // Creamos la tabla para mostrarla en el desplegable
+    if ($meter->num_rows > 0) {
+        $contenidoCarrito .= '<h3>Contenido del Carrito:</h3>';
+        $contenidoCarrito .= '<table>';
+        $contenidoCarrito .= '<thead>';
+        $contenidoCarrito .= '<tr>';
+        $contenidoCarrito .= '<th></th>';
+        $contenidoCarrito .= '<th>Producto</th>';
+        $contenidoCarrito .= '<th>Cantidad</th>';
+        $contenidoCarrito .= '<th>Precio SNKR</th>';
+        $contenidoCarrito .= '<th>TOTAL</th>';
+        $contenidoCarrito .= '</tr>';
+        $contenidoCarrito .= '</thead>';
+        $contenidoCarrito .= '<tbody>';
+
+        while ($filita = $meter->fetch_assoc()) {
+            $contenidoCarrito .= '<tr>';
+            $contenidoCarrito .= '<td class="centrado"><img src="../vista/img/' . $filita['imagenURL'] . '" alt="' . $filita['nombre'] . '" width="130"></td>';
+            $contenidoCarrito .= '<td class="centrado">' . $filita['nombre'] . '</td>';
+            $contenidoCarrito .= '<td class="centrado">' . $filita['cantidad'] . '</td>';
+            $contenidoCarrito .= '<td class="centrado">' . $filita['preciouna'] . '</td>';
+            $contenidoCarrito .= '<td class="centrado">' . $filita['total'] . '</td>';
+            $contenidoCarrito .= '</tr>';
+        }
+
+        // Calcular el total de los subtotales
+        $stmt = "SELECT SUM(carrito.cantidad * productos.precio) AS total_carrito FROM carrito INNER JOIN productos ON carrito.idProducto = productos.idProducto";
+        $result = $conex->query($stmt);
+        $totalcarrito = 0;
+        if ($result && $filita = $result->fetch_assoc()) {
+            $totalcarrito = $filita['total_carrito'];
+        }
+
+        // Agregar la fila del total al final de la tabla
+        $contenidoCarrito .= '<tr>';
+        $contenidoCarrito .= '<td colspan="4"><b>Total:</b></td>';
+        $contenidoCarrito .= '<td class="centrado">' . $totalcarrito . '</td>';
+        $contenidoCarrito .= '</tr>';
+
+        $contenidoCarrito .= '</tbody>';
+        $contenidoCarrito .= '</table>';
+//AQUI ESTA EL BTON DE VACIAR TODO
+/*         $contenidoCarrito .= '<form action="" method="POST">';
+        $contenidoCarrito .= '<input type="hidden" name="accion" value="vaciarCarrito">';
+        $contenidoCarrito .= '<input type="submit" value="Vaciar Carrito">';
+        $contenidoCarrito .= '</form>'; */
+    } else {
+        $contenidoCarrito .= '<p>No hay elementos en el carrito</p>';
+    }
+
+    return $contenidoCarrito;
+}
+/* function vaciarCarritoUsuario($nombreUsuario) {
+    $conex = db::bdMYSQLI(); // Conexión a la base de datos
+
+    // Consulta para eliminar los elementos del carrito del usuario dado
+    $stmt = "DELETE FROM carrito WHERE idUser = ?";
+    
+    // Preparar la declaración
+    $query = $conex->prepare($stmt);
+
+    // Vincular parámetros
+    $query->bind_param("s", $nombreUsuario);
+
+    // Ejecutar la consulta
+    if ($query->execute()) {
+        return true; // Éxito al vaciar el carrito del usuario
+    } else {
+        return false; // Falla al vaciar el carrito del usuario
+    }
+    $nombreUsuario = "<?= $_SESSION['nombre']?>"; // Nombre del usuario cuyo carrito queremos vaciar
+} */
+?>
+</body>
+</html>
+
+
