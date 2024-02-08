@@ -10,8 +10,8 @@
   <meta name="Instituto" content="Ies Villabla" />
   <meta name="Modulo" content="Implantación de Aplicaciones Web" />
   <title>Tienda Sneaker</title>
-  <link rel="stylesheet" href="../index.css" />
-  <script src="../index.js"></script>
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="js/index.js"></script>
   <?php 
   require_once '../controlador/back.php';
   if (!$_SESSION['autentificado']) { # Comprobación de que se ha pasado por el proceso de Login

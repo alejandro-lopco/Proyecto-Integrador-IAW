@@ -3,8 +3,8 @@
     $cntrlCompra = new cliente('Cliente');
     $chkCompra = cliente::addCarrito($_GET['user'],$_GET['id'],$_GET['cant']);
     if (!$chkCompra) {
-        include "../vista/carrito/falloCarrito.php";
+        include "../../vista/carrito/falloCarrito.php";
     } else {
-        header("Location: ../vista/cliente.php");
+        header("Location: ../../vista/cliente.php");
         die();
     }

@@ -1,4 +1,3 @@
-<?php require_once '../controlador/back.php'; ?>
 <!--Inicio Contenedor Producto Específico-->
 <div class="item">
     <figure>
@@ -11,7 +10,7 @@
         <p>Unidades Restantes: <?= $stock ?></p>
     </div>
     <div>
-        <form action="../../controlador/pedido/controladorStock.php" method="get">
+        <form action="../controlador/pedido/controladorStock.php" method="get">
             <input type="number" name="cant" id="cant" placeholder="Nuevo Stock"> <br />
             <input type="hidden" name="id" value="<?= $id ?>">
             <input type="submit" name="Actualizar" value="Actualizar">

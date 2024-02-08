@@ -11,7 +11,7 @@
         <p>Unidades Restantes: <?= $stock ?></p>
     </div>
     <div>
-        <form action="../../controlador/carrito/controladorCarrito.php" method="get">
+        <form action="../controlador/carrito/controladorCarrito.php" method="get">
             <input type="number" name="cant" id="cant" min="1" max="<?=$stock?>" placeholder="Cantidad"> <br />
             <input type="hidden" name="id" value="<?= $id ?>">
             <input type="hidden" name="user" value="<?= $_SESSION['nombre'] ?>">

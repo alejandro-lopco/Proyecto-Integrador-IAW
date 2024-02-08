@@ -3,7 +3,7 @@ require_once '../back.php';
 
 # Comprobación de acceso mediante la
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
-    header("Location: ../vista/login.html");
+    header("Location: ../../index.html");
     die();
 }
 # Regcogemos todos los datos introducidos
