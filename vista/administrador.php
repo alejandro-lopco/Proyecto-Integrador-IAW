@@ -1,4 +1,4 @@
-<?php session_start()?>
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,16 +10,16 @@
   <meta name="Instituto" content="Ies Villabla" />
   <meta name="Modulo" content="Implantación de Aplicaciones Web" />
   <title>Tienda Sneaker</title>
-  <link rel="stylesheet" href="../index.css" />
-  <script src="../index.js"></script>
-  <?php 
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="js/index.js"></script>
+  <?php
   require_once '../controlador/back.php';
   if (!$_SESSION['autentificado']) { # Comprobación de que se ha pasado por el proceso de Login
-    header("Location: falloLogin.html");
+    header("Location: ../index.html");
     die();
   }
   if ($_SESSION['rol'] != 'administrador') {
-    header("Location: falloLogin.html");
+    header("Location: ../index.html");
     die();
   }
   ?>
@@ -37,7 +37,7 @@
       <figure class="figLogin">
         <a href="index.php">
           <img src="img/login.png" alt="login" class="login" />
-      </a>
+        </a>
         <figcaption class="loginCaption">Iniciar Sesión</figcaption>
       </figure>
     </a>
@@ -53,13 +53,23 @@
           <hr />
           <!--Inicio Contenedores Productos-->
           <div class="contItems">
-            <?php mostrarProductos();?>
+            <?php mostrarProductos(); ?>
           </div>
           <!--Fin Contenedores Productos-->
-        <!--Inicio Contenedores Opciones-->
+          <h2>Productos No Disponibles</h2>
+          <hr />
+          <div class="contItems">
+            <?php administrador::productosNoDisponibles(); ?>
+          </div>
+          <h2>Listado de pedidos</h2>
+          <hr />
+          <div>
+            <?php administrador::verPedidosAdmin(); ?>
+          </div>
+          <!--Inicio Contenedores Opciones-->
         </div>
         <div class="opcionesBody">
-          <p class="tituloOpciones">Bienvenido <?= $_SESSION['nombre']?></p>
+          <p class="tituloOpciones">Bienvenido <?= $_SESSION['nombre'] ?></p>
           <hr />
           <!--Inicio contenedor Opción Específica-->
           <div class="opcion" onmouseover="abrirDeslizable1()" onmouseout="cerrarDeslizable1()">

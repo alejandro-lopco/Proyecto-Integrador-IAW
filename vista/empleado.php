@@ -15,11 +15,11 @@
   <?php 
   require_once '../controlador/back.php';
   if (!$_SESSION['autentificado']) { # Comprobación de que se ha pasado por el proceso de Login
-    header("Location: falloLogin.html");
+    header("Location: ../index.html");
     die();
   }
   if (!$_SESSION['rol'] = 'empleado') {
-    header("Location: falloLogin.html");
+    header("Location: ../index.html ");
     die();
   }
   ?>
@@ -56,6 +56,16 @@
             <?php mostrarProductos();?>
           </div>
           <!--Fin Contenedores Productos-->
+          <h2>Productos No Disponibles</h2>
+          <hr />
+          <div class="contItems">
+          <?php empleado::productosNoDisponibles();?>
+          </div>
+          <h2>Listado de pedidos</h2>
+          <hr />
+          <div>
+            <?php empleado::verPedidos();?>
+          </div>
         <!--Inicio Contenedores Opciones-->
         </div>
         <div class="opcionesBody">

@@ -7,6 +7,6 @@
     <?php } ?>
 </ol>
 
-<a href="./crearUsuario.html"><button>Volver a la creación de usario</button></a>
+<a href="../../vista/user/crearUsuario.html"><button>Volver a la creación de usario</button></a>
 
 <?php print_r($errorCreate) ?>

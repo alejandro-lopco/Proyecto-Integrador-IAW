@@ -10,16 +10,16 @@
   <meta name="Instituto" content="Ies Villabla" />
   <meta name="Modulo" content="Implantación de Aplicaciones Web" />
   <title>Tienda Sneaker</title>
-  <link rel="stylesheet" href="../index.css" />
-  <script src="../index.js"></script>
+  <link rel="stylesheet" href="css/cliente.css" />
+  <script src="js/cliente.js"></script>
   <?php 
   require_once '../controlador/back.php';
   if (!$_SESSION['autentificado']) { # Comprobación de que se ha pasado por el proceso de Login
-    header("Location: falloLogin.html");
+    header("Location: ../index.html");
     die();
   }
   if ($_SESSION['rol'] != 'cliente') {
-    header("Location: falloLogin.html");
+    header("Location: ../index.html");
     die();
   }
   ?>
@@ -82,22 +82,17 @@
             <!--Fin contenedor Opción Específica-->
           </div>
           <!--Inicio contenedor Opción Específica-->
-          <div class="opcion" onmouseover="abrirDeslizable2()" onmouseout="cerrarDeslizable2()">
+          <div class="opcion" onmouseover="abrirCarrito()" onmouseout="cerrarCarrito()">
             <!--Incio Contenedor Opción Toggle-->
             <div class="toggleDeslizable">
               <a href="#" id="tituloOpcion2">
-                <b>Opcion</b>
+                <b>Carrito</b>
               </a>
             </div>
             <!--Fin Contenedor Opción Toggle-->
             <!--Incio Contenedor Opción Contenido-->
             <div class="deslizableOpcion" id="deslizableOpcion2">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-                quia mollitia. Tenetur tempore itaque, architecto perspiciatis
-                consequuntur explicabo natus quas nobis minima totam ullam
-                sint mollitia libero quia qui? Iste!
-              </p>
+              <?php cliente::mostrarCarrito($_SESSION['nombre'])?>
               <!--Fin Contenedor Opción Contenido-->
             </div>
             <!--Fin contenedor Opción Específica-->

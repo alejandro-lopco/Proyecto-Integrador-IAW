@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body {
+    background-color: whitesmoke;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+/* TITULO Y BOTÓN DE INICIO DE SESIÓN */
+header {
+    background-color: darkred;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headerTitulo {
+    width: 75%;
+    margin: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.headerTitulo p {
+    color: whitesmoke;   
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 42px;
+    margin: 0 0;
+}
+.login {
+    width: 75px;
+    height: 75px;
+    text-align: center;
+}
+.loginLink {
+    text-decoration: none;    
+    background-color: lightcoral;
+    margin: 0 0;
+    transition: background-color 0.5s ease;
+}
+.loginLink:hover {
+    background-color: lightskyblue;
+}
+.figLogin {
+    text-align: center;
+}
+.loginCaption {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    
+}
+/* TITULO Y BOTÓN DE INICIO DE SESIÓN */
+/* CUERPO PRINCIPAL */
+article {
+    display: flex;
+    justify-content: flex-end;
+}
+.mainBody {
+    width: 75%;
+    background-color: whitesmoke;
+    margin: 0 0;
+}
+    /* CONTENEDOR PRINCIPAL */
+.mainBody h2 {
+    padding: 10px;
+    padding-left: 25px;
+    margin-bottom: 0;
+}
+.mainBody hr {
+    border: 2px solid black;
+    border-radius: 1px;  
+    margin-left: 50px;
+    margin-right: 40px;
+}
+        /* CONTENEDOR ITEMS*/
+.contItems {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.item{
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 25px;
+  }
+  
+.item:hover{
+    box-shadow: 0 5px 10px black;
+  }
+.item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+  
+.item figure{
+    overflow: hidden;
+}
+  
+.item:hover img{
+    transform: scale(1.1);
+}
+        /* CONTENEDOR ITEMS*/
+    /* CONTENEDOR PRINCIPAL */
+    /* CONTENEDOR OPCIONES */
+.opcionesBody {
+    background-color: silver;
+    width: 25%;
+    float: right;
+    margin: 0 0;
+}
+        /* TITULO OPCIONES */
+.tituloOpciones {
+    padding-left: 15px;
+    font-size: 35px;
+    margin: 0 0;
+}
+.opcionesBody hr {
+    border: 2px solid black;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+        /* TITULO OPCIONES */
+        /* CONTENEDOR OPCIÓN ESPECÍFICA */
+.opcion {
+    display: flex;
+    flex-direction: column;
+
+}
+.opcion:hover {
+    color: white;
+    background-color: black;
+}
+            /* CONTENEDOR OPCIÓN ESPECÍFICA CONTENIDO*/
+.toggleDeslizable a {
+    text-decoration: none;
+    color: black;
+    padding-left: 25px;
+}
+.deslizableOpcion {
+    height: 0;
+    overflow: hidden;
+}
+            /* CONTENEDOR OPCIÓN ESPECÍFICA CONTENIDO*/
+        /* CONTENEDOR OPCIÓN ESPECÍFICA */
+    /* CONTENEDOR OPCIONES */
+/* CUERPO PRINCIPAL */
+/* PIE DE PAGINA*/
+footer {
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+footer p {
+    margin: 0 0;
+    padding: 30px;
+}
+/* PIE DE PAGINA*/
+/* final de configuración genérica de css */

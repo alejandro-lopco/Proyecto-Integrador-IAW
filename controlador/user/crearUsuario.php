@@ -1,5 +1,5 @@
 <?php
-require_once 'back.php';
+require_once '../back.php';
 
 # Comprobación de acceso mediante la
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
@@ -22,13 +22,13 @@ if ($check)  {
 }
 if (sizeof($errorCreate) == 0) {
     session_start();
-    $_SESSION['nombre']         = $formName;
+    $_SESSION['nombre']         = $formLogin;
     $_SESSION['autentificado']  = true;
 
     crearUsuario($formLogin,$formPasswd,$formName,$formApe,$formMail,$formDir);
 
-    header("Location: ../vista/cliente.php");
+    header("Location: ../../vista/cliente.php");
     die();
 } else {
-    include '../vista/falloCreate.php';
+    include '../../vista/user/falloCreate.php';
 }

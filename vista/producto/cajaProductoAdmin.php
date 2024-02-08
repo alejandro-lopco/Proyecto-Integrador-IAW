@@ -11,14 +11,11 @@
         <p>Unidades Restantes: <?= $stock ?></p>
     </div>
     <div>
-        <form action="../controlador/controladorCompra.php" method="get">
-            <input type="number" name="cant" id="cant" placeholder="Cantidad"> <br />
+        <form action="../controlador/pedido/controladorStock.php" method="get">
+            <input type="number" name="cant" id="cant" placeholder="Nuevo Stock"> <br />
             <input type="hidden" name="id" value="<?= $id ?>">
-            <input type="hidden" name="user" value="<?= $_SESSION['nombre'] ?>">
-            <input type="submit" name="Comprar" value="Comprar">
+            <input type="submit" name="Actualizar" value="Actualizar">
         </form>
-        </form>
-        <form action="#"><input type="submit" name="Detalle" value="Detalle"></form>
     </div>
     <!--Fin Contenedor Producto Específico-->
 </div>
