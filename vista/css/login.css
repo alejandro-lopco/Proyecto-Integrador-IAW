@@ -16,11 +16,11 @@ header {
 }
 
 h2 {
-    margin-top: 20px; /* Añade margen superior */
-    margin-bottom: 30px; /* Añade margen inferior */
-    color: darkred; /* Color rojo */
-    font-size: 28px; /* Tamaño de fuente */
-    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    margin-top: 20px; 
+    margin-bottom: 30px; 
+    color: darkred; 
+    font-size: 28px; 
+    text-transform: uppercase; 
 }
 
 form {
@@ -51,7 +51,7 @@ form input[type="password"] {
 form input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: darkred; /* rojo */
+    background-color: darkred; 
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -60,18 +60,18 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: darkred; /* rojo oscuro al pasar el mouse */
+    background-color: darkred; 
 }
 
 a {
     display: block;
     text-align: center;
     margin-top: 20px;
-    color: darkred; /* rojo */
+    color: darkred;
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover {
-    color: darkred; /* rojo oscuro al pasar el mouse */
+    color: darkred; 
 }

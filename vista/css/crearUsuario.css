@@ -1,0 +1,72 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Estilos para los títulos */
+h2 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: darkred;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+}
+h3 {
+
+    color: darkred;
+
+}
+
+/* Estilos para la tabla */
+table {
+    width: 500px;
+    border-collapse: collapse;
+}
+
+/* Estilos para los labels */
+label {
+    font-weight: bold;
+}
+
+/* Estilos para los input */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="reset"],
+input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilos específicos para los botones de reiniciar y enviar */
+input[type="reset"],
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: darkred;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background-color: crimson;
+}
