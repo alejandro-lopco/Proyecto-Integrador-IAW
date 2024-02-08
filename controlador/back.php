@@ -218,6 +218,23 @@ class administrador extends empleado {
         parent::__construct("Administrador");
     }
     # Acciones específicas de usuario
+    static function productosNoDisponiblesAdmin() {
+        # Mismo funcioamiento que mostrarProducto(), pero con los productos fuera de stock
+        # Así podemos acceder gráficamente a productos a los que los clientes no tendrían acceso
+        $conex  = db::bdMYSQLI();
+        $stmt   = "SELECT * FROM productos WHERE stock = 0";
+        foreach ($conex->query($stmt) as $producto) {
+    
+            $id         = $producto['idProducto'];
+            $nombre     = $producto['nombre'];
+            $precio     = $producto['precio'];
+            $categoria  = $producto['categoria'];
+            $stock      = $producto['stock'];
+            $imagenURL  = $producto['imagenURL'];
+    
+            include '../vista/producto/cajaProductoAdmin.php';
+        }
+    }
     static function verPedidosAdmin() {
         # Mismo funcioamiento que verPedidos(), pero a diferencia del empleado este tiene acceso a opciones adicionales
         $conex      = db::bdMYSQLI();

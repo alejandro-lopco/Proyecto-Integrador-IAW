@@ -59,7 +59,7 @@
           <h2>Productos No Disponibles</h2>
           <hr />
           <div class="contItems">
-            <?php administrador::productosNoDisponibles(); ?>
+            <?php administrador::productosNoDisponiblesAdmin(); ?>
           </div>
           <h2>Listado de pedidos</h2>
           <hr />
