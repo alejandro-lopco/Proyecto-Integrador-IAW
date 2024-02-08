@@ -14,10 +14,12 @@ $formApe    = $_POST['userApe'];
 $formMail   = $_POST['userMail'];
 $formDir    = $_POST['userDir'];
 # Comprobamos si los datos que hemos insertado son válidos
-
+$errorCreate = comprobacionesUsuario($formLogin,$formPasswd,$formName,$formApe,$formMail,$formDir);
 # Comprobamos si el usuario ya ha sido creado
 $check = checkUsuario($formLogin,$formPasswd);
-$errorCreate = comprobacionesUsuario($formLogin,$formPasswd,$formName,$formApe,$formMail,$formDir);
+if ($check)  {
+    array_push($errorCreate,"Este usuario ya existe");
+}
 if (sizeof($errorCreate) == 0) {
     session_start();
     $_SESSION['nombre']         = $formName;
@@ -27,4 +29,6 @@ if (sizeof($errorCreate) == 0) {
 
     header("Location: ../vista/cliente.php");
     die();
+} else {
+    include '../vista/falloCreate.php';
 }

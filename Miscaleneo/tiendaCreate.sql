@@ -34,8 +34,8 @@ CREATE TABLE productos (
     idProveedor INT,
     imagenURL VARCHAR(255),
     FOREIGN KEY (idProveedor) REFERENCES proveedores(idProveedor)
-    ON DELETE CASCADE 
-    ON UPDATE CASCADE )
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE )
 ENGINE=INNODB
 DEFAULT CHARSET=utf8mb4;
 CREATE TABLE pedidos (
@@ -46,10 +46,22 @@ CREATE TABLE pedidos (
     idUser INT NOT NULL,
     precioUnitario DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (idProducto) REFERENCES productos(idProducto)
-    ON DELETE CASCADE 
-    ON UPDATE CASCADE ,
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE ,
     FOREIGN KEY (idUser) REFERENCES usuarios(idUser)
-    ON DELETE CASCADE 
-    ON UPDATE CASCADE )
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE )
+ENGINE=INNODB
+DEFAULT CHARSET=utf8mb4;
+CREATE TABLE carrito (
+    idUser VARCHAR(18) NOT NULL,
+    idProducto INT NOT NULL,
+    cantidad INT NOT NULL,
+    FOREIGN KEY (idProducto) REFERENCES productos(idProducto)
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE ,
+    FOREIGN KEY (idUser) REFERENCES usuarios(nombreLogin)
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE )
 ENGINE=INNODB
 DEFAULT CHARSET=utf8mb4;

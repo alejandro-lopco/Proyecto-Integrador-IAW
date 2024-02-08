@@ -86,6 +86,7 @@ function mostrarProductos() {
     $stmt   = "SELECT * FROM productos WHERE stock > 0";
     foreach ($conex->query($stmt) as $producto) {
 
+        $id         = $producto['idProducto'];
         $nombre     = $producto['nombre'];
         $precio     = $producto['precio'];
         $categoria  = $producto['categoria'];
@@ -98,5 +99,14 @@ function mostrarProductos() {
             Usamos el include para poder configurar fácilmente el HTML que estiliza la consulta
         */        
 
+    }
+}
+function comprar($user,$prod,$cant) {
+    $conex  = db::bdMYSQLI();
+    if ($cant < 0) {
+        header("Location: ../index.html");
+    } else {
+        $stmt   = "INSERT INTO carrito (idUser,idProducto,cantidad) VALUES (?,?,?)";
+        $conex->execute_query($stmt,[$user,$prod,$cant]);    
     }
 }
