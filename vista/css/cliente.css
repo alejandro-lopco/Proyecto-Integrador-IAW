@@ -162,3 +162,40 @@ footer p {
 }
 /* PIE DE PAGINA*/
 /* final de configuración genérica de css */
+
+
+form input[type="submit"] {
+    width: 94.5%;
+    padding: 10px;
+    background-color: darkred; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+form input[type="submit"]:hover {
+    background-color: crimson; 
+}
+form input[type="number"] {
+    width: 94.5%;
+    padding: 10px;
+    color: darkred;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid black;
+}
+form input[type="number"]:hover {
+    border: 2px solid crimson;
+}
+
+.contAccionProducto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accionProducto {
+    padding: 20px;
+}

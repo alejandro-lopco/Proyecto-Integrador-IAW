@@ -12,10 +12,16 @@
     </div>
     <div>
         <form action="../controlador/carrito/controladorCarrito.php" method="get">
-            <input type="number" name="cant" id="cant" min="1" max="<?=$stock?>" placeholder="Cantidad"> <br />
-            <input type="hidden" name="id" value="<?= $id ?>">
-            <input type="hidden" name="user" value="<?= $_SESSION['nombre'] ?>">
-            <input type="submit" name="Comprar" value="Comprar">
+        <input type="hidden" name="id" value="<?= $id ?>">
+        <input type="hidden" name="user" value="<?= $_SESSION['nombre'] ?>">
+        <div class="contAccionProducto">
+            <div class="accionProducto">
+                <input type="number" name="cant" id="cant" min="1" max="<?=$stock?>" placeholder="Cantidad"> <br />
+            </div>
+            <div class="accionProducto">
+                <input type="submit" name="Comprar" value="Comprar">
+            </div>
+        </div>
         </form>
         </form>
         <form action="#"><input type="submit" name="Detalle" value="Detalle"></form>

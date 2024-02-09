@@ -11,9 +11,15 @@
     </div>
     <div>
         <form action="../controlador/pedido/controladorStock.php" method="get">
-            <input type="number" name="cant" id="cant" placeholder="Nuevo Stock"> <br />
-            <input type="hidden" name="id" value="<?= $id ?>">
-            <input type="submit" name="Actualizar" value="Actualizar">
+        <input type="hidden" name="id" value="<?= $id ?>">
+            <div class="contAccionProducto">
+                <div class="accionProducto">
+                    <input type="number" name="cant" id="cant" placeholder="Nuevo Stock"> <br />
+                </div>
+                <div class="accionProducto">                    
+                    <input type="submit" name="Actualizar" value="Actualizar">
+                </div>
+            </div>
         </form>
     </div>
     <!--Fin Contenedor Producto Específico-->
