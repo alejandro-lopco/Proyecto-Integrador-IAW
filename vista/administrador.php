@@ -29,16 +29,16 @@
   <header>
     <!--Inicio Titulo principal de página-->
     <div class="headerTitulo">
-      <p>VISTA DEL ADMINISTRADOR EXPLOTADOR</p>
+      <p>Bienvenido <?= $_SESSION['nombre'] ?></p>
     </div>
     <!--Fin Titulo principal de página-->
     <!--Inicio Botón Login-->
     <a href="login.php" class="loginLink">
       <figure class="figLogin">
-        <a href="index.php">
+        <a href="../controlador/cerrarsesion.php">
           <img src="img/login.png" alt="login" class="login" />
         </a>
-        <figcaption class="loginCaption">Iniciar Sesión</figcaption>
+        <figcaption class="loginCaption">Cerrar Sesión</figcaption>
       </figure>
     </a>
     <!--Fin Botón Login-->
@@ -69,7 +69,7 @@
           <!--Inicio Contenedores Opciones-->
         </div>
         <div class="opcionesBody">
-          <p class="tituloOpciones">Bienvenido <?= $_SESSION['nombre'] ?></p>
+          <p class="tituloOpciones">Opciones de <?= $_SESSION['nombre'] ?></p>
           <hr />
           <!--Inicio contenedor Opción Específica-->
           <div class="opcion" onmouseover="abrirDeslizable1()" onmouseout="cerrarDeslizable1()">

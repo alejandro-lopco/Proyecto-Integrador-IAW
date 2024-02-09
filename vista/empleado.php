@@ -29,16 +29,16 @@
   <header>
     <!--Inicio Titulo principal de página-->
     <div class="headerTitulo">
-      <p>VISTA DEL EMPLEADO CON SUELDO MINIMO</p>
+      <p>Bienvenido <?= $_SESSION['nombre']?> </p>
     </div>
     <!--Fin Titulo principal de página-->
     <!--Inicio Botón Login-->
     <a href="login.php" class="loginLink">
       <figure class="figLogin">
-        <a href="index.php">
+        <a href="../controlador/cerrarsesion.php">
           <img src="img/login.png" alt="login" class="login" />
       </a>
-        <figcaption class="loginCaption">Iniciar Sesión</figcaption>
+        <figcaption class="loginCaption">Cerrar Sesión</figcaption>
       </figure>
     </a>
     <!--Fin Botón Login-->

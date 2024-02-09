@@ -198,3 +198,31 @@ form input[type="number"]:hover {
 .accionProducto {
     padding: 20px;
 }
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  
+  thead tr {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  
+  th {
+    padding: 8px;
+  }
+  
+  
+  tbody tr:nth-child(odd) {
+    background-color: #ffe6e6; 
+  }
+  
+  
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  

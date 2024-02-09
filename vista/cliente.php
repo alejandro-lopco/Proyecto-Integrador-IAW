@@ -29,16 +29,16 @@
   <header>
     <!--Inicio Titulo principal de página-->
     <div class="headerTitulo">
-      <p>(((VISTA DE CLIENTE CON MUCHO DINERO)))</p>
+      <p>Bienvenido <?= $_SESSION['nombre']?></p>
     </div>
     <!--Fin Titulo principal de página-->
     <!--Inicio Botón Login-->
     <a href="login.php" class="loginLink">
       <figure class="figLogin">
-        <a href="index.php">
+        <a href="../controlador/cerrarsesion.php">
           <img src="img/login.png" alt="login" class="login" />
       </a>
-        <figcaption class="loginCaption">Iniciar Sesión</figcaption>
+        <figcaption class="loginCaption">Cerrar Sesión</figcaption>
       </figure>
     </a>
     <!--Fin Botón Login-->
@@ -64,22 +64,7 @@
           <!--Inicio contenedor Opción Específica-->
           <div class="opcion" onmouseover="abrirDeslizable1()" onmouseout="cerrarDeslizable1()">
             <!--Incio Contenedor Opción Toggle-->
-            <div class="toggleDeslizable">
-              <a href="#" id="tituloOpcion1">
-                <b>Opcion</b>
-              </a>
-            </div>
             <!--Incio Contenedor Opción Contenido-->
-            <div class="deslizableOpcion" id="deslizableOpcion1">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-                quia mollitia. Tenetur tempore itaque, architecto perspiciatis
-                consequuntur explicabo natus quas nobis minima totam ullam
-                sint mollitia libero quia qui? Iste!
-              </p>
-              <!--Incio Contenedor Opción Contenido-->
-            </div>
-            <!--Fin contenedor Opción Específica-->
           </div>
           <!--Inicio contenedor Opción Específica-->
           <div class="opcion" onmouseover="abrirCarrito()" onmouseout="cerrarCarrito()">
