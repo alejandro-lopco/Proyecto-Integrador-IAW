@@ -9,6 +9,3 @@
 
 <a href="../../vista/user/crearUsuario.html"><button>Volver a la creación de usario</button></a>
 <link rel="stylesheet" href="../../vista/css/fallologin.css" />
-
-
-<?php print_r($errorCreate) ?>

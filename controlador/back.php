@@ -78,6 +78,7 @@ class cliente {
 
         $precioTotal = 0;
         include '../vista/carrito/accionGeneralCarrito.php';
+        echo "<div class='contCarro'>";
         foreach ($conex->execute_query($stmt,[$user]) as $prodCarrito) {
             $carritoProd    = $prodCarrito['idProducto'];    
             $carritoCant    = $prodCarrito['cantidad'];
@@ -94,7 +95,8 @@ class cliente {
             include '../vista/carrito/cajaCarrito.php';
 
         }
-        echo "<h3>Precio Total ".round($precioTotal,2)." €</h3>";
+        echo "</div>";
+        echo "<h3 class='carroTotal'>Precio Total ".round($precioTotal,2)." €</h3>";
     }
     public static function generarPedido($user) : void  {
         $conex      = db::bdMYSQLI();
@@ -207,7 +209,7 @@ class empleado extends cliente {
             $datosProd  = $conex->execute_query($stmtProducto,[$idProducto]);
             $rstlProd   = $datosProd->fetch_assoc();
             $prodNombre     = $rstlProd['nombre'];
-
+            
             include '../vista/pedido/listadoPedido.php';
         }
     }
@@ -233,6 +235,24 @@ class administrador extends empleado {
             $imagenURL  = $producto['imagenURL'];
     
             include '../vista/producto/cajaProductoAdmin.php';
+        }
+    }
+    static function addProducto($nombre,$precio,$categoria,$stock,$idProveedor,$imagenURL) {
+        $conex      = db::bdMYSQLI();
+        $stmt       = "INSERT INTO productos (nombre, precio, categoria, stock, idProveedor, imagenURL) VALUES (?,?,?,?,?,?)";
+        $stmtProv   = "SELECT * FROM proveedores WHERE idProveedor=?";
+        $qryProv    = $conex->execute_query($stmtProv,[$idProveedor]);
+        if ($qryProv->num_rows > 0) { # Solo hara la inserción si el proveedor existe
+            $conex->execute_query($stmt,[$nombre,$precio,$categoria,$stock,$idProveedor,$imagenURL]);
+        }
+    }
+    static function delProducto($nombre) {
+        $conex      = db::bdMYSQLI();
+        $stmt       = "DELETE FROM productos WHERE nombre=?";
+        $stmtProd   = "SELECT * FROM productos WHERE nombre=?";
+        $qryProd    = $conex->execute_query($stmtProd,[$nombre]);
+        if ($qryProd->num_rows > 0) {
+            $conex->execute_query($stmt,[$nombre]);
         }
     }
     static function verPedidosAdmin() {

@@ -35,8 +35,8 @@
     <!--Inicio Botón Login-->
     <a href="login.php" class="loginLink">
       <figure class="figLogin">
-        <a href="../controlador/cerrarsesion.php">
-          <img src="img/login.png" alt="login" class="login" />
+        <a href="../controlador/user/cerrarsesion.php">
+          <img src="img/logout.png" alt="login" class="login" />
       </a>
         <figcaption class="loginCaption">Cerrar Sesión</figcaption>
       </figure>
@@ -71,12 +71,13 @@
             <!--Incio Contenedor Opción Toggle-->
             <div class="toggleDeslizable">
               <a href="#" id="tituloOpcion2">
-                <b>Carrito</b>
+                <h2><i>Carrito</i></h2>
               </a>
             </div>
             <!--Fin Contenedor Opción Toggle-->
             <!--Incio Contenedor Opción Contenido-->
             <div class="deslizableOpcion" id="deslizableOpcion2">
+              <hr />
               <?php cliente::mostrarCarrito($_SESSION['nombre'])?>
               <!--Fin Contenedor Opción Contenido-->
             </div>

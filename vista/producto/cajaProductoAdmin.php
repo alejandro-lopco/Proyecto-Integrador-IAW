@@ -16,6 +16,11 @@
             <input type="hidden" name="id" value="<?= $id ?>">
             <input type="submit" name="Actualizar" value="Actualizar">
         </form>
+        <br />
+        <form action="../controlador/admin/controladorDelProducto.php" method="get">
+            <input type="hidden" name="id" value="<?= $nombre ?>">
+            <input type="submit" name="Borrar" value="Borrar">
+        </form>
     </div>
     <!--Fin Contenedor Producto Específico-->
 </div>

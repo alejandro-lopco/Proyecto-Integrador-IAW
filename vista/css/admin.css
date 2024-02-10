@@ -60,7 +60,7 @@ article {
     justify-content: flex-end;
 }
 .mainBody {
-    width: 75%;
+    width: 100%;
     background-color: whitesmoke;
     margin: 0 0;
 }
@@ -79,7 +79,7 @@ article {
         /* CONTENEDOR ITEMS*/
 .contItems {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 .item{
     border-radius: 10px;
@@ -130,11 +130,7 @@ article {
 .opcion {
     display: flex;
     flex-direction: column;
-}
-.opcion hr {
-    border: 2px solid white;
-    margin-left: 50px;
-    margin-right: 100px;  
+
 }
 .opcion:hover {
     color: white;
@@ -167,21 +163,21 @@ footer p {
 /* PIE DE PAGINA*/
 /* final de configuración genérica de css */
 
-
-form input[type="submit"] {
+.mainBody form input[type="submit"] {
     width: 94.5%;
     padding: 10px;
+    margin: 10px;
     background-color: darkred; 
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+}.mainBody 
 form input[type="submit"]:hover {
     background-color: crimson; 
 }
-form input[type="number"] {
+.mainBody form input[type="number"] {
     width: 94.5%;
     padding: 10px;
     color: darkred;
@@ -191,7 +187,7 @@ form input[type="number"] {
     transition: background-color 0.3s ease;
     border: 2px solid black;
 }
-form input[type="number"]:hover {
+.mainBody form input[type="number"]:hover {
     border: 2px solid crimson;
 }
 
@@ -200,37 +196,59 @@ form input[type="number"]:hover {
     justify-content: center;
     align-items: center;
 }
-#tituloOpcion2 h2 {
-    padding-left: 15px;
-}
 .accionProducto {
     padding: 20px;
 }
-.inputCarro {
-    margin: 10px;
+/* Estilo para la tabla */
+.tablaPedidos {
+    margin-left: 75px;
+    margin-right: 75px;
+    
 }
-.contCarro {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 4px;
-    justify-items: center;
+.pedido table {
+    width: 100%;
+    border-collapse: collapse;
+} 
+.pedido thead tr {
+    background-color: #ff4d4d;
+    color: white;
+}  
+.pedido th {
+    padding: 8px;
+} 
+.pedido tbody tr:nth-child(odd) {
+    background-color: #ffe6e6; 
+}  
+.pedido td {
+    border: 1px solid #ddd;
+    padding: 8px;
 }
-.contProdCarrito {
-    width: 350px;
-    border-radius: 10px;
-    padding: 25px;
-    padding-left: 25px;
-}
-.contProdCarrito:hover{
-    transition: 250ms;
-    background-color: silver;
+/*Estilo para añadir producto*/
+.tablaAddProd table {
+    width: 100%;
+    border-collapse: collapse;
+} 
+.tablaAddProd thead tr {
     color: black;
+}  
+.tablaAddProd th {
+    padding: 8px;
+} 
+.tablaAddProd tbody tr:nth-child(odd) {
+    background-color: slategrey; 
+}  
+.tablaAddProd td {
+    border: 1px solid slategray;
+    padding: 8px;
 }
-.contDatosProd {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.inputAdd {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    color: white;
+    background-color: darkred;
+    transition: 500ms ease;
 }
-.carroTotal {
-    padding-left: 45px;
+.inputAdd:hover {
+    background-color: crimson;
 }

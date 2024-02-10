@@ -10,8 +10,8 @@
   <meta name="Instituto" content="Ies Villabla" />
   <meta name="Modulo" content="Implantación de Aplicaciones Web" />
   <title>Tienda Sneaker</title>
-  <link rel="stylesheet" href="css/index.css" />
-  <script src="js/index.js"></script>
+  <link rel="stylesheet" href="css/admin.css" />
+  <script src="js/admin.js"></script>
   <?php
   require_once '../controlador/back.php';
   if (!$_SESSION['autentificado']) { # Comprobación de que se ha pasado por el proceso de Login
@@ -35,8 +35,8 @@
     <!--Inicio Botón Login-->
     <a href="login.php" class="loginLink">
       <figure class="figLogin">
-        <a href="../controlador/cerrarsesion.php">
-          <img src="img/login.png" alt="login" class="login" />
+        <a href="../controlador/user/cerrarsesion.php">
+          <img src="img/logout.png" alt="login" class="login" />
         </a>
         <figcaption class="loginCaption">Cerrar Sesión</figcaption>
       </figure>
@@ -63,7 +63,7 @@
           </div>
           <h2>Listado de pedidos</h2>
           <hr />
-          <div>
+          <div class="tablaPedidos">
             <?php administrador::verPedidosAdmin(); ?>
           </div>
           <!--Inicio Contenedores Opciones-->
@@ -76,42 +76,45 @@
             <!--Incio Contenedor Opción Toggle-->
             <div class="toggleDeslizable">
               <a href="#" id="tituloOpcion1">
-                <b>Opcion</b>
+                <b>Añadir nuevo producto</b>
               </a>
             </div>
             <!--Incio Contenedor Opción Contenido-->
             <div class="deslizableOpcion" id="deslizableOpcion1">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-                quia mollitia. Tenetur tempore itaque, architecto perspiciatis
-                consequuntur explicabo natus quas nobis minima totam ullam
-                sint mollitia libero quia qui? Iste!
-              </p>
+              <form action="../controlador/admin/controladorAddProducto.php" method="get">
+                <table class="tablaAddProd">
+                  <tr>
+                    <td><label for="nombre">Nombre Producto</label></td>
+                    <td><input type="text" name="nombre" id="nombre"></td>
+                  </tr>
+                  <tr>
+                    <td><label for="Precio">Precio:</label></td>
+                    <td><input type="number" name="precio" id="precio"></td>
+                  </tr>
+                  <tr>
+                    <td><label for="categoria">Categoria:</label></td>
+                    <td><input type="text" name="categoria" id="categoria"></td>
+                  </tr>
+                  <tr>
+                    <td><label for="stock">Stock:</label></td>
+                    <td><input type="number" name="stock" id="stock"></td>
+                  </tr>
+                  <tr>
+                    <td><label for="idProveedor">ID del Proveedor:</label></td>
+                    <td><input type="number" name="idProveedor" id="idProveedor"></td>
+                  </tr>
+                  <tr>
+                    <td><label for="urlImagen">Nombre Archivo Imagen:</label></td>
+                    <td><input type="text" name="urlImagen" id="urlImagen"></td>
+                  </tr>
+                </table>
+                <input type="submit" value="Añadir" class="inputAdd">
+              </form>
               <!--Incio Contenedor Opción Contenido-->
             </div>
             <!--Fin contenedor Opción Específica-->
           </div>
           <!--Inicio contenedor Opción Específica-->
-          <div class="opcion" onmouseover="abrirDeslizable2()" onmouseout="cerrarDeslizable2()">
-            <!--Incio Contenedor Opción Toggle-->
-            <div class="toggleDeslizable">
-              <a href="#" id="tituloOpcion2">
-                <b>Opcion</b>
-              </a>
-            </div>
-            <!--Fin Contenedor Opción Toggle-->
-            <!--Incio Contenedor Opción Contenido-->
-            <div class="deslizableOpcion" id="deslizableOpcion2">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-                quia mollitia. Tenetur tempore itaque, architecto perspiciatis
-                consequuntur explicabo natus quas nobis minima totam ullam
-                sint mollitia libero quia qui? Iste!
-              </p>
-              <!--Fin Contenedor Opción Contenido-->
-            </div>
-            <!--Fin contenedor Opción Específica-->
-          </div>
           <!--Fin Contenedores Opciones-->
         </div>
         <!--Fin Contenedores Body-->

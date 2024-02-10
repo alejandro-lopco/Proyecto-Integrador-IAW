@@ -65,3 +65,5 @@ CREATE TABLE carrito (
         ON UPDATE CASCADE )
 ENGINE=INNODB
 DEFAULT CHARSET=utf8mb4;
+
+SELECT * FROM tienda.proveedores WHERE idProveedor=2
