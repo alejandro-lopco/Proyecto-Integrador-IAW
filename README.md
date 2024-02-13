@@ -3,8 +3,8 @@
 - Alejandro López Corral
 - Iván Barchín Barrasa
 # Introducción
-    Para el proyecto final de este trimestre se nos ha propuesto avanzar y aumentar las capacidades y funcionalidades del proyecto anterior, el cual fue uno más de aclimatación al desarrollo web con herramientas como PhP y XAMPP. 
-    En este proyecto se implantará el uso de accesos a Bases de Datos como MariaDB, a continuación se indagará en detalle sobre la organización del equipo de desarrollo y las herramientas utilizadas.
+Para el proyecto final de este trimestre se nos ha propuesto avanzar y aumentar las capacidades y funcionalidades del proyecto anterior, el cual fue uno más de aclimatación al desarrollo web con herramientas como PhP y XAMPP. 
+En este proyecto se implantará el uso de accesos a Bases de Datos como MariaDB, a continuación se indagará en detalle sobre la organización del equipo de desarrollo y las herramientas utilizadas.
 # Funciones Vitales
 -   Integración de base de datos (MariaDB/MySQL) con PhP.
     -   Se debe satisfacer y demostrar el uso de las operaciones CRUD.
