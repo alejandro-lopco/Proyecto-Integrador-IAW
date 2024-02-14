@@ -23,8 +23,6 @@
             </div>
         </div>
         </form>
-        </form>
-        <form action="#"><input type="submit" name="Detalle" value="Detalle"></form>
     </div>
     <!--Fin Contenedor Producto Específico-->
 </div>
